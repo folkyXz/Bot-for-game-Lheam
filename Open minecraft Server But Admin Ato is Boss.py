@@ -1,1 +1,1 @@
-
+print("Server Opened")
