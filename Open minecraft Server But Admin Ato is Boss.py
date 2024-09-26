@@ -1,26 +1,13 @@
-print("Server Opened")
-print("Server Opened")
-# i = 1
-# while True :
-#     i = i + 1    
-#     print(i)
 import time
 from selenium import webdriver
-from selenium.webdriver.chrome.service import Service
-from selenium.webdriver.chrome.options import Options
-import chromedriver_autoinstaller
+from selenium.webdriver.firefox.service import Service
+import geckodriver_autoinstaller
 
-# ติดตั้ง ChromeDriver อัตโนมัติ
-chromedriver_autoinstaller.install()
+# ติดตั้ง Geckodriver อัตโนมัติ
+geckodriver_autoinstaller.install()
 
-# กำหนด Options สำหรับ Chrome
-chrome_options = Options()
-chrome_options.add_argument("--headless")  # เปิดในโหมด headless
-chrome_options.add_argument("--no-sandbox")
-chrome_options.add_argument("--disable-dev-shm-usage")
-
-# สร้าง Driver
-driver = webdriver.Chrome(options=chrome_options)
+# สร้าง Driver สำหรับ Firefox
+driver = webdriver.Firefox()
 
 # เปิด YouTube
 driver.get("https://www.youtube.com")
